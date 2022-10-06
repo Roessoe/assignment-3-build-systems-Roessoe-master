@@ -1,4 +1,4 @@
-cmake_minimum_required(version 3.22.1)
+cmake_minimum_required(VERSION 3.22.1)
 project(assignment-3-build-systems-Roessoe-master VERSION 0.1.0)
 
 add_executable(lift_sim)
@@ -15,3 +15,9 @@ target_sources( lift_sim
         )
 
 include_directories(./inc)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+
