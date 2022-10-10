@@ -37,6 +37,20 @@ if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU")
     endif ()
 endif ()
 
+if(CXX_GNU_LIKE)
+    target_compile_options(lift_sim PRIVATE
+            # set warnings for all build types
+            $<$<CXX_COMPILER_ID:GNU,Clang,AppleClang>:-Wall -Wextra -Wpedantic -Werror -fno-omit-frame-pointer>
+            # debug optimisation in Debug
+            $<$<AND:$<CXX_COMPILER_ID:GNU,Clang,AppleClang>,$<CONFIG:Release>>:-O3>
+            # O3 optimisation Release
+            $<$<AND:$<CXX_COMPILER_ID:GNU,Clang,AppleClang>,$<CONFIG:Debug>>:-Og -g>
+            )
+endif()
+
+
+
+
 
 
 
