@@ -48,7 +48,15 @@ if(CXX_GNU_LIKE)
             )
 endif()
 
-
+# Set options for MSVC
+target_compile_options(lift_sim PRIVATE
+        # set warnings for all build types
+        $<$<CXX_COMPILER_ID:MSVC>:/Wall>
+        # debug optimisation in Debug
+        $<$<AND:$<CXX_COMPILER_ID:MSVC>,$<CONFIG:Release>>:/O2>
+        # O3 optimisation in Release
+        $<$<AND:$<CXX_COMPILER_ID:MSVC>,$<CONFIG:Debug>>:/RTC1 /Od /Zi>
+        )
 
 
 
