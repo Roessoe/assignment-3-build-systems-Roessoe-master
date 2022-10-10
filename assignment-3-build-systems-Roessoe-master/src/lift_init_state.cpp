@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "../../inc/lift_init_state.h"
+#include "lift_init_state.h"
 
 states::lift_init_state::lift_init_state(simulation::lift* lift, simulation::buttons* buttons):
     lift_state(lift, buttons)

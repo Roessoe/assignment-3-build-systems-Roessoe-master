@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../inc/lift_down_state.h"
+#include "lift_down_state.h"
 
 states::lift_down_state::lift_down_state(simulation::lift* lift, simulation::buttons* buttons) :
     lift_state(lift, buttons),

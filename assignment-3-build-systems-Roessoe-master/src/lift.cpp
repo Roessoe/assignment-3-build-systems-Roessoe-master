@@ -2,7 +2,8 @@
 // Created by dza02 on 9/17/2021.
 //
 
-#include "../../inc/lift.h"
+#include "lift.h"
+
 
 simulation::lift::lift(int initial_floor) : m_floor{initial_floor} {}
 

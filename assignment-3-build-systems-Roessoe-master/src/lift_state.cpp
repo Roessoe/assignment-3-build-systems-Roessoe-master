@@ -1,4 +1,4 @@
-#include "../../inc/lift_state.h"
+#include "lift_state.h"
 
 states::lift_state::lift_state(simulation::lift* lift, simulation::buttons* buttons):
     m_lift{lift},

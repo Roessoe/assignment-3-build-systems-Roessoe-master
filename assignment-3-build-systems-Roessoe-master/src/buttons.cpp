@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../inc/buttons.h"
+#include "buttons.h"
 
 void simulation::buttons::reset(){
     std::fill(std::begin(m_requests), std::end(m_requests), NO_REQUEST);
