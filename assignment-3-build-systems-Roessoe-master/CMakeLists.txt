@@ -12,6 +12,7 @@ target_sources( lift_sim
         ./src/lift_state.cpp
         ./src/lift_steady_state.cpp
         ./src/lift_up_state.cpp
+        main.cpp
         )
 
 include_directories(./inc)
@@ -25,5 +26,17 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang" OR "${CMAKE_CXX_COMPILER_ID}" MATC
 else()
     set(CXX_GNU_COMPATIBLE OFF)
 endif()
+
+
+
+if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU")
+    if ("NOT ${CMAKE_BUILD_TYPE}" MATCHES "Debug" AND " NOT ${CMAKE_BUILD_TYPE}" MATCHES "Release")
+        message(FATAL_ERROR "ERROR")
+    else("${CMAKE_BUILD_TYPE}" MATCHES "")
+        set(CMAKE_BUILD_TYPE "Debug")
+    endif ()
+endif ()
+
+
 
 
